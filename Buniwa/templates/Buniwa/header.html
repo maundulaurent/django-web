@@ -1,0 +1,49 @@
+<!-- Navbar start -->
+<div class="nav-bar  header-transparent ">
+    <div class="container-fluid z rounded-4 fixed-top">
+        <nav class="navbar navbar-dark navbar-expand-lg py-4">           
+            <a href="{% url 'index' %}" class="logo">
+                <img src="static/img/buniwalogo.jpg" style="height: 50px; width: 50px; border-radius: 50%;">
+                
+              </a>
+              <h3 class="text-primary fw-bold mb-0">Buni<span class="text-dark">wa</span> </h3>
+              
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+                        <div class="dropdown-menu bg-light">
+                            <a href="about" class="dropdown-item">About Us</a>
+                            <a href="about" class="dropdown-item">Mission</a>
+                            <a href="about" class="dropdown-item">Vision</a>
+                            <a href="about" class="dropdown-item">Testimonial</a>
+                            <a href="team" class="dropdown-item">Our Team</a>
+                            <a href="about" class="dropdown-item">F.A.Qs</a>
+
+                        </div>
+                    </div>
+                    <a href="services" class="nav-item nav-link">Services</a>
+                    <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                    
+                    <a href="{% url 'home' %}" class="nav-item nav-link">Customer Portal</a>
+                    <a href="career" class="nav-item nav-link">Careers</a>
+                    <a href="contact" class="nav-item nav-link">Contact Us</a>
+                </div>
+                
+                <a href="#" class="btn btn-success py-2 px-4 d-none d-xl-inline-block rounded-pill">Get Started</a> <div class="vertical-line"></div>
+                <a href="#" class="fs-5 text-white fw-bold px-3">Login</a>
+            </div>
+        </nav>
+    </div>
+
+
+    
+</div>
+
+
+<!-- Navbar End -->
