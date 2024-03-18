@@ -20,3 +20,6 @@ def career(request):
 
 def contact(request):
     return render(request, 'Buniwa/contact.html')
+
+def projects(request):
+    return render(request, "Buniwa/projects.html")
