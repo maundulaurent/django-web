@@ -151,6 +151,8 @@ h4, h5, h6, .h4, .h5, .h6 {
 
 /*** Navbar End ***/
 
+
+
 /*** Events Start ***/
 .event .tab-class .nav-item a.active {
     background: var(--bs-primary) !important;
@@ -180,7 +182,7 @@ h4, h5, h6, .h4, .h5, .h6 {
     position: relative;
     height: 100%;
     border-radius: 8px;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    box-shadow: 0 0 45px #FFD80D;
 }
 
 .service-content::after {
@@ -191,7 +193,7 @@ h4, h5, h6, .h4, .h5, .h6 {
     top: 0;
     left: 0;
     bottom: auto;
-    background: var(--bs-primary);
+    background: darkgreen;
     border-radius: 8px;
     transition: 1s;
 }
@@ -473,75 +475,6 @@ h4, h5, h6, .h4, .h5, .h6 {
     margin-bottom: 0;
   }
   /* **********End ********* */
-
-/*--------------------------------------------------------------
-# Featured Services
---------------------------------------------------------------*/
-.featured-services .icon-box {
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
-    background: #f8f8f3;
-    box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
-    transition: all 0.3s ease-in-out;
-    border-radius: 8px;
-    z-index: 1;
-    min-height: 500px;
-  }
-  
-  .featured-services .icon-box::before {
-    content: "";
-    position: absolute;
-    background: #cbe0fb;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 100%;
-    transition: all 0.3s;
-    z-index: -1;
-  }
-  
-  .featured-services .icon-box:hover::before {
-    background: #03f538;
-    top: 0;
-    border-radius: 0px;
-  }
-  
-  .featured-services .icon {
-    margin-bottom: 15px;
-  }
-  
-  .featured-services .icon i {
-    font-size: 48px;
-    line-height: 1;
-    color: #106eea;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .featured-services .title {
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 18px;
-  }
-  
-  .featured-services .title a {
-    color: #111;
-  }
-  
-  .featured-services .description {
-    font-size: 15px;
-    line-height: 28px;
-    margin-bottom: 0;
-  }
-  
-  .featured-services .icon-box:hover .title a,
-  .featured-services .icon-box:hover .description {
-    color: #fff;
-  }
-  
-  .featured-services .icon-box:hover .icon i {
-    color: #fff;
-  }
 
 
 /*** testimonial Start ***/
