@@ -25,3 +25,6 @@ def projects(request):
 
 def faqs(request):
     return render(request, "Buniwa/faqs.html")
+
+def blog(request):
+    return render(request, "Buniwa/blog.html")
