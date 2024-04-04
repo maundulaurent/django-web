@@ -28,3 +28,6 @@ def faqs(request):
 
 def blog(request):
     return render(request, "Buniwa/blog.html")
+
+def dash(request):
+    return render(request, "Buniwa/dash.html")
