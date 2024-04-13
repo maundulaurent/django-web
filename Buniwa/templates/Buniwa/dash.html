@@ -1,3 +1,5 @@
+
+
 {% load static %}
  
  <!DOCTYPE html>
@@ -7,6 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buniwa | Dash</title>
   <link rel="stylesheet" href="static/css/login.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="icon" href="{% static 'images/buniwalogo.jpg' %}" type="image/x-icon">
 
   
     <!-- Google Fonts -->
@@ -42,9 +46,40 @@
     </div>
   </section><!-- End Top Bar -->
 
-  <nav class="navbar navbar-expand-lg py-4" style="background-color:  #008374;;">
+  <div class="nav-bar  header-transparent ">
+    <div class="container-fluid z rounded-4 fixed-top">
+        <nav class="navbar navbar-dark navbar-expand-lg py-4">           
+            <a href="{% url 'index' %}" class="logo">
+                <img src="static/images/buniwalogo.jpg" style="height: 50px; width: 50px; border-radius: 50%;">
+                
+              </a>
+              <h3 class="text-primary fw-bold mb-0">Buni<span class="text-dark">wa</span> </h3>
+              
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
+                    <a href="services" class="nav-item nav-link">Services</a>
+                    <a href="career" class="nav-item nav-link">Careers</a>                   
+                    <a href="dash" class="nav-item nav-link">Customer Portal</a>
+                    <a href="blog" class="nav-item nav-link">Blog</a>
+                    <a href="contact" class="nav-item nav-link">Contact Us</a>
+                    
+                </div>
+                
+                <a href="dash" class="btn py-2 px-4 d-none d-xl-inline-block rounded-pill" style="background: darkgreen">Get Started</a>
+            </div>
+        </nav>
+    </div>
+
+
+    
+</div>
+  <!-- <nav class="navbar navbar-expand-lg py-4" style="background-color:  #008374;;">
     <div class="container-fluid ms-4">
-      <a class="navbar-brand ms-4 text-white" href="#plogin">Login</a>
+      <a class="navbar-brand ms-4 text-white" href="dash">Login</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -58,7 +93,7 @@
         <h3 class="me-2 text-white">Buniwa<span>.</span></h3>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
   <!-- End Header -->
 
@@ -69,12 +104,40 @@
       <div class="container position-relative">
         <div class="row gy-5" data-aos="fade-in">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
-            <h2>Welcome to <span>Buniwa digital.</span></h2>
-            <p>This's, where digital innovation meets creative solutions!Whether you're looking to elevate your online presence, launch cutting-edge web applications, or drive your brand forward with impactful advertising, we're here to make your vision a reality</p>
-            <div class="d-flex justify-content-center justify-content-lg-start">
-              <a href="#plogin" class="btn-get-started">Login</a>
-              <a href="#" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            
+
+<!-- A Login System -->
+          <div class="container text-center mb-5" id="plogin" style="max-width: 330px;">
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+
+            <form method="post">
+              {% csrf_token %}
+              <div class="input-group mb-2">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" name="username" class="form-control" placeholder="username" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+
+              <div class="form-floating mb-2">
+                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-2">
+                <input type="password" name="pass" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+              </div>
+              <button type="submit" class="btn-primary w-100 btn-lg">Sign In</button>
+            </form>
+              
             </div>
+<!-- End login -->
+
           </div>
           <div class="col-lg-6 order-1 order-lg-2">
             <img src="static/images/hero-img.svg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
@@ -129,32 +192,10 @@
     <!-- End Hero Section -->
 
 
+
     <!-- Ka-login system -->
-    <div class="container text-center mb-5" id="plogin" style="max-width: 330px;">
-      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
-      <div class="input-group mb-2">
-        <span class="input-group-text" id="basic-addon1">@</span>
-        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Password</label>
-      </div>
   
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
-      <a href="{% url 'projects' %}" class="btn btn-lg btn-primary w-100">Sign in</a>
-      
-    </div>
     <!-- End Login System -->
   
   
@@ -221,28 +262,29 @@
               </div>
     
               <div class="col-lg-8">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <form action="." method="post">
+                  {% csrf_token %}
                   <div class="row">
                     <div class="col-md-6 form-group">
-                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                      <input type="text" name="m_name" class="form-control" id="name" placeholder="Your Name" required>
                     </div>
                     <div class="col-md-6 form-group mt-3 mt-md-0">
-                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                      <input type="email" class="form-control" name="m_email" id="email" placeholder="Your Email" required>
                     </div>
                   </div>
                   <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="I want to do business with you..." required>
+                    <input type="text" class="form-control" name="m_content" id="subject" placeholder="I want to do business with you..." required>
                   </div>
                   <div class="form-group mt-3">
-                    <textarea class="form-control" name="message" rows="7" placeholder="Description of Project to be handled" required></textarea>
+                    <textarea class="form-control" name="m_content" rows="7" placeholder="Description of Project to be handled" required></textarea>
                   </div>
-                  <div class="my-3">
+                  <!-- <div class="my-3">
                     <div class="loading">Loading</div>
                     <div class="error-message"></div>
                     <div class="sent-message">Your message has been sent. Thank you!</div>
-                  </div>
-                  <div class="text-center"><button type="submit">Send Message</button></div>
-                  <p class="text center">Have an account?<a href="#plogin"> Login</a></p>
+                  </div> -->
+                  <div class="text-center"><button>Send Message</button></div>
+                  <p class="text center">Have an account?<a href="dash"> Login</a></p>
                 </form>
               </div><!-- End Contact Form -->
     
