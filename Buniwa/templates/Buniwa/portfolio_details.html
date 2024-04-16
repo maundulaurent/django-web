@@ -1,0 +1,305 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Buniwa | Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/images/favicon.png" rel="icon">
+  <link href="static/images/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="static/vendor/aos/aos.css" rel="stylesheet">
+    <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="static/css/login.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+
+    <link rel="icon" href="{% static 'images/buniwalogo.jpg' %}" type="image/x-icon">
+
+
+</head>
+
+<body>
+
+<!-- Navbar start -->
+<div class="nav-bar  header-transparent ">
+  <div class="container-fluid z rounded-4 fixed-top">
+      <nav class="navbar navbar-dark navbar-expand-lg py-4">           
+          <a href="{% url 'index' %}" class="logo">
+              <img src="static/images/buniwalogo.jpg" style="height: 50px; width: 50px; border-radius: 50%;">
+              
+            </a>
+            <h3 class="text-primary fw-bold mb-0">Buni<span class="text-dark">wa</span> </h3>
+            
+          <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+              <span class="fa fa-bars text-primary"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+              <div class="navbar-nav ms-auto">
+                  <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
+                  <a href="services" class="nav-item nav-link">Services</a>
+                  <a href="career" class="nav-item nav-link">Careers</a>                   
+                  <a href="dash" class="nav-item nav-link">Customer Portal</a>
+                  <a href="blog" class="nav-item nav-link">Blog</a>
+                  <a href="contact" class="nav-item nav-link">Contact Us</a>
+
+              </div>
+          </div>
+      </nav>
+  </div>
+
+
+  
+</div>
+<!-- Navbar End -->
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="background-image: url('');">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+              <br>
+              <h2>Projects Details</h2>
+              <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="portfolio">Portfolio</a></li>
+            <li>Project Details</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Project details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+
+        <div class="position-relative h-100">
+          <div class="slides-1 portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+
+              <div class="swiper-slide">
+                <img src="static/images/b1.jpg" alt="">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="static/images/b2.jpg" alt="">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="static/images/b3.jpg" alt="">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="static/images/b4.jpg" alt="">
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-description">
+              <h2>Web Design Projects</h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+              <p>
+                Amet consequatur qui dolore veniam voluptatem voluptatem sit. Non aspernatur atque natus ut cum nam et. Praesentium error dolores rerum minus sequi quia veritatis eum. Eos et doloribus doloremque nesciunt molestiae laboriosam.
+              </p>
+
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  I blend creativity with functionality to craft digital experiences that captivate and engage users. With a keen eye for aesthetics and a passion for user-centric design, I create intuitive interfaces that seamlessly guide visitors through their online journey. From sleek layouts to visually stunning graphics, every element is meticulously crafted to reflect our brand identity and enhance user experience.                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div>
+                  <img src="static/images/b5.jpg" class="testimonial-img" alt="">
+                  <h3>mc. maundu</h3>
+                  <h4>Designer</h4>
+                </div>
+              </div>
+
+              <p>
+                With a keen eye for aesthetics and a passion for user-centric design, I create intuitive interfaces that seamlessly guide visitors through their online journey. From sleek layouts to visually stunning graphics, every element is meticulously crafted to reflect our brand identity and enhance user experience.
+              <p>
+                Sunt voluptatum sapiente facilis quo odio aut ipsum repellat debitis. Molestiae et autem libero. Explicabo et quod necessitatibus similique quis dolor eum. Numquam eaque praesentium rem et qui nesciunt.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> <span>Web design</span></li>
+                <li><strong>Client</strong> <span>Allure Company</span></li>
+                <li><strong>Project date</strong> <span>01 February, 2024</span></li>
+                <li><strong>Project URL</strong> <a href="https://allurelounge.co.ke/">www.allurelounge</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Projects Details Section -->
+
+
+
+  <!-- Project 2 -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-between gy-4 mt-4">
+          <br><br>
+          <div class="col-lg-3">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> <span>Web design</span></li>
+                <li><strong>Client</strong> <span>Allure Company</span></li>
+                <li><strong>Project date</strong> <span>01 February, 2024</span></li>
+                <li><strong>Project URL</strong> <a href="https://allurelounge.co.ke/">www.allurelounge</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="portfolio-description">
+              <h2>Seo Optimisation Projects</h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+              <p>
+                Amet consequatur qui dolore veniam voluptatem voluptatem sit. Non aspernatur atque natus ut cum nam et. Praesentium error dolores rerum minus sequi quia veritatis eum. Eos et doloribus doloremque nesciunt molestiae laboriosam.
+              </p>
+
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  I blend creativity with functionality to craft digital experiences that captivate and engage users. With a keen eye for aesthetics and a passion for user-centric design, I create intuitive interfaces that seamlessly guide visitors through their online journey. From sleek layouts to visually stunning graphics, every element is meticulously crafted to reflect our brand identity and enhance user experience.                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div>
+                  <img src="static/images/b5.jpg" class="testimonial-img" alt="">
+                  <h3>Mukathe Giulio</h3>
+                  <h4>Designer</h4>
+                </div>
+              </div>
+
+              <p>
+                With a keen eye for aesthetics and a passion for user-centric design, I create intuitive interfaces that seamlessly guide visitors through their online journey. From sleek layouts to visually stunning graphics, every element is meticulously crafted to reflect our brand identity and enhance user experience.
+              <p>
+                Sunt voluptatum sapiente facilis quo odio aut ipsum repellat debitis. Molestiae et autem libero. Explicabo et quod necessitatibus similique quis dolor eum. Numquam eaque praesentium rem et qui nesciunt.
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Project2 -->
+
+
+    <!-- Project 2 -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-between gy-4 mt-4">
+          <br><br>
+          
+          <div class="col-lg-8">
+            <div class="portfolio-description">
+              <h2>Social Media Marketing Projects</h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+              <p>
+                Amet consequatur qui dolore veniam voluptatem voluptatem sit. Non aspernatur atque natus ut cum nam et. Praesentium error dolores rerum minus sequi quia veritatis eum. Eos et doloribus doloremque nesciunt molestiae laboriosam.
+              </p>
+
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  I blend creativity with functionality to craft digital experiences that captivate and engage users. With a keen eye for aesthetics and a passion for user-centric design, I create intuitive interfaces that seamlessly guide visitors through their online journey. From sleek layouts to visually stunning graphics, every element is meticulously crafted to reflect our brand identity and enhance user experience.                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div>
+                  <img src="static/images/b5.jpg" class="testimonial-img" alt="">
+                  <h3>Gatwiri Purity</h3>
+                  <h4>Designer</h4>
+                </div>
+              </div>
+
+              <p>
+                With a keen eye for aesthetics and a passion for user-centric design, I create intuitive interfaces that seamlessly guide visitors through their online journey. From sleek layouts to visually stunning graphics, every element is meticulously crafted to reflect our brand identity and enhance user experience.
+              <p>
+                Sunt voluptatum sapiente facilis quo odio aut ipsum repellat debitis. Molestiae et autem libero. Explicabo et quod necessitatibus similique quis dolor eum. Numquam eaque praesentium rem et qui nesciunt.
+              </p>
+
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> <span>Social Media</span></li>
+                <li><strong>Client</strong> <span>Social Company</span></li>
+                <li><strong>Project date</strong> <span>01 February, 2024</span></li>
+                <li><strong>Project URL</strong> <a href="#">www.socialmarkets</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Project2 -->
+
+  </main><!-- End #main -->
+
+            <!-- Vendor JS Files -->
+            <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="static/vendor/aos/aos.js"></script>
+            <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+            <script src="static/vendor/purecounter/purecounter_vanilla.js"></script>
+            <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+            <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+            <script src="static/vendor/php-email-form/validate.js"></script>
+        
+          <!-- Template Main JS File -->
+            <script src="static/js/login.js"></script>
+        </body>
+
+</html>

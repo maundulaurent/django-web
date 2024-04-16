@@ -11,9 +11,12 @@ urlpatterns = [
     path('projects', views.projects, name="projects"),
     path('faqs', views.faqs, name="faqs"),
     path('blog', views.blog, name="blog"),
+    path('blog_details', views.blog_details, name="blog_details"),
     path('dash',views.dash, name="dash"),
     path('logout',views.user_logout, name='logout'),
-    path('realp',views.realp, name="realp"),
+    path('portfolio_details',views.portfolio_details, name="portfolio_details"),
+    path('portfolio',views.portfolio, name="portfolio"),
+
 
 
 ]

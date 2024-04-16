@@ -34,6 +34,9 @@ def faqs(request):
 def blog(request):
     return render(request, "Buniwa/blog.html")
 
+def blog_details(request):
+    return render(request, "Buniwa/blog_details.html")
+
 def dash(request):
     if request.method == 'POST':
         username=request.POST.get('username')
@@ -51,5 +54,8 @@ def user_logout(request):
     logout(request)
     return redirect('dash')
 
-def realp(request):
-    return render(request, 'Buniwa/realp.html')
+def portfolio_details(request):
+    return render(request, 'Buniwa/portfolio_details.html')
+
+def portfolio(request):
+    return render(request, 'Buniwa/portfolio.html')
