@@ -1,25 +1,20 @@
-
-
 {% load static %}
- 
- <!DOCTYPE html>
- <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buniwa | Dash</title>
-  <link rel="stylesheet" href="static/css/login.css">
-  <link rel="stylesheet" href="static/css/style.css">
-  <link rel="icon" href="{% static 'images/buniwalogo.jpg' %}" type="image/x-icon">
 
-  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Buniwa | Projects</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  
-    <!-- bss -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- Vendor CSS Files -->
     <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,18 +22,37 @@
     <link href="static/vendor/aos/aos.css" rel="stylesheet">
     <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  
- </head>
- <body>
-  <!-- Header -->
-  <div class="nav-bar  header-transparent">
-    <div class="container-fluid z rounded-4 fixed-top">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="static/css/login.css" rel="stylesheet">
+    <!-- Bootstrap Stylesheet -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link rel="icon" href="{% static 'images/buniwalogo.jpg' %}" type="image/x-icon">
+
+
+</head>
+<body>
+
+
+<!-- Navbar start -->
+<div class="nav-bar  header-transparent container">
+    <div class="container-fluid z fixed-top">
         <nav class="navbar navbar-dark navbar-expand-lg py-4">           
             <a href="{% url 'index' %}" class="logo">
                 <img src="static/images/buniwalogo.jpg" style="height: 50px; width: 50px; border-radius: 50%;">
                 
               </a>
-              <h3 class="text-primary fw-bold mb-0">Buni<span class="text-dark">wa</span> </h3>
+              <a href="{% url 'index' %}"><h3 class="text-primary fw-bold mb-0">Buni<span class="text-dark">wa</span> </h3></a>
               
             <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars text-primary"></span>
@@ -46,23 +60,37 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto">
                     <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+                        <div class="dropdown-menu bg-light">
+                            <a href="about" class="dropdown-item">About Us</a>
+                            <a href="portfolio" class="dropdown-item">Portifolio</a>
+                            <a href="about" class="dropdown-item">Testimonial</a>
+                            <a href="team" class="dropdown-item">Our Team</a>
+                            <a href="faqs" class="dropdown-item">F.A.Qs</a>
+
+                        </div>
+                    </div>
                     <a href="services" class="nav-item nav-link">Services</a>
                     <a href="career" class="nav-item nav-link">Careers</a>                   
                     <a href="dash" class="nav-item nav-link">Customer Portal</a>
                     <a href="blog" class="nav-item nav-link">Blog</a>
                     <a href="contact" class="nav-item nav-link">Contact Us</a>
-                    
+
                 </div>
                 
+                <a href="dash" class="btn py-2 px-4 d-none d-xl-inline-block rounded-pill" style="background: darkgreen">Get Started</a>
             </div>
         </nav>
-    </div>    
-  </div>
-  <!-- End Header -->
+    </div>
 
 
+    
+</div>
+<!-- Navbar End -->
 
-    <!-- ======= Hero Section ======= -->
+<!-- ======= Hero Section ======= -->
 <section id="hero" class="hero">
   <div class="container position-relative">
     <div class="row gy-5" data-aos="fade-in">
@@ -95,7 +123,7 @@
                   <input type="checkbox" value="remember-me"> Remember me
                 </label>
               </div>
-              <button type="submit" class="btn-primary w-100 btn-lg">Sign In</button>
+              <button type="submit" class="w-100 btn-lg" style="background-color: darkgreen; box-shadow: 4px 4px 0 yellow;">Sign In</button>
             </form>
               
             </div>
@@ -116,7 +144,7 @@
               <div class="icon-box">
                 <div class="icon"><i class="bi bi-easel"></i></div>
                 <h4 class="title">Discover&Plan</h4>
-                <small class="text-white font-italic">Give us your ideas and projections.</small>
+                <small class="text-white"><i> Give us your ideas and projections.</i></small>
               </div>
             </div><!--End Icon Box -->
 
@@ -124,7 +152,7 @@
               <div class="icon-box">
                 <div class="icon"><i class="bi bi-command"></i></div>
                 <h4 class="title">Design</h4>
-                <small class="text-white font-italic">We show you the best out of us.</small>
+                <small class="text-white"><i> We show you the best out of us.</i></small>
               </div>
             </div><!--End Icon Box -->
 
@@ -133,7 +161,7 @@
               <div class="icon-box">
                 <div class="icon"><i class="bi bi-geo-alt"></i></div>
                 <h4 class="title">Develop</h4>
-                <small class="text-white font-italic">Putting your visions into reality.</small>
+                <small class="text-white"><i>Putting your visions into reality.</i></small>
               </div>
             </div><!--End Icon Box -->
   
@@ -141,7 +169,7 @@
               <div class="icon-box">
                 <div class="icon"><i class="bi bi-gem"></i></div>
                 <h4 class="title">Implement</h4>
-                <small class="text-white font-italic">We implement it for you.</small>
+                <small class="text-white"><i>We implement it for you.</i></small>
               </div>
             </div><!--End Icon Box -->
 
@@ -167,7 +195,7 @@
         <div class="container text-center" data-aos="zoom-out">
           <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
           <h3>Order To Action</h3>
-          <p> Get to work with Buniwa by getting in touch with the company's team, who will work for your projects extensively, and considering all your requirements, keeping in mind the time frames. Request an invitation here.</p>
+          <p class="bellefair-font fs-5"> Get to work with Buniwa by getting in touch with the company's team, who will work for your projects extensively, and considering all your requirements, keeping in mind the time frames. Request an invitation here.</p>
           <a class="cta-btn" href="#order">Request</a>
         </div>
     </section><!-- End Call To Action Section -->
@@ -181,7 +209,7 @@
     
             <div class="section-header py-5">
               <h2 class="text-center">Request an account for Business</h2>
-              <p>Do business with Buniwa Creations by working with the company's teams transparently. Have an account, then Login into the Projects account for an easy tasking.</p>
+              <p class="bellefair-font text-dark fs-5">Do business with Buniwa Creations by working with the company's teams transparently. Have an account, then Login into the Projects account for an easy tasking.</p>
             </div>
     
             <div class="row gx-lg-0 gy-4">
@@ -241,11 +269,6 @@
                   <div class="form-group mt-3">
                     <textarea class="form-control" name="m_content" rows="7" placeholder="Description of Project to be handled" required></textarea>
                   </div>
-                  <!-- <div class="my-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                  </div> -->
                   <div class="text-center"><button>Send Message</button></div>
                   <p class="text center">Have an account?<a href="dash"> Login</a></p>
                 </form>

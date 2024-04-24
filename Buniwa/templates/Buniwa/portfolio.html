@@ -11,10 +11,6 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="static/images/favicon.png" rel="icon">
-  <link href="static/images/apple-touch-icon.png" rel="apple-touch-icon">
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,9 +23,19 @@
     <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/owl.carousel.min.css' %}" rel="stylesheet">
+
     <!-- Template Main CSS File -->
     <link href="static/css/login.css" rel="stylesheet">
-    <link href="static/css/style.css" rel="stylesheet">
+    <!-- Bootstrap Stylesheet -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
     <link rel="icon" href="{% static 'images/buniwalogo.jpg' %}" type="image/x-icon">
 
@@ -38,15 +44,15 @@
 <body>
 
 
-      <!-- Header -->
-  <div class="nav-bar  header-transparent">
-    <div class="container-fluid z rounded-4 fixed-top">
+<!-- Navbar start -->
+<div class="nav-bar  header-transparent container">
+    <div class="container-fluid z fixed-top">
         <nav class="navbar navbar-dark navbar-expand-lg py-4">           
             <a href="{% url 'index' %}" class="logo">
                 <img src="static/images/buniwalogo.jpg" style="height: 50px; width: 50px; border-radius: 50%;">
                 
               </a>
-              <h3 class="text-primary fw-bold mb-0">Buni<span class="text-dark">wa</span> </h3>
+              <a href="{% url 'index' %}"><h3 class="text-primary fw-bold mb-0">Buni<span class="text-dark">wa</span> </h3></a>
               
             <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars text-primary"></span>
@@ -54,169 +60,186 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto">
                     <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+                        <div class="dropdown-menu bg-light">
+                            <a href="about" class="dropdown-item">About Us</a>
+                            <a href="portfolio" class="dropdown-item">Portifolio</a>
+                            <a href="about" class="dropdown-item">Testimonial</a>
+                            <a href="team" class="dropdown-item">Our Team</a>
+                            <a href="faqs" class="dropdown-item">F.A.Qs</a>
+
+                        </div>
+                    </div>
                     <a href="services" class="nav-item nav-link">Services</a>
                     <a href="career" class="nav-item nav-link">Careers</a>                   
                     <a href="dash" class="nav-item nav-link">Customer Portal</a>
                     <a href="blog" class="nav-item nav-link">Blog</a>
                     <a href="contact" class="nav-item nav-link">Contact Us</a>
+
                 </div>
                 
+                <a href="dash" class="btn py-2 px-4 d-none d-xl-inline-block rounded-pill" style="background: darkgreen">Get Started</a>
             </div>
         </nav>
-    </div>    
-  </div>
-  <!-- End Header -->
+    </div>
+
+
+    
+</div>
+<!-- Navbar End -->
 
     <br><br><br>
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio sections-bg">
-        <div class="container" data-aos="fade-up">
-    
-            <div class="section-header">
-            <h2>Our Portfolio</h2>
-            <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti</p>
-            </div>
-    
-            <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
-    
-            <div>
-                <ul class="portfolio-flters">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-app">Apps</li>
-                <li data-filter=".filter-product">Products</li>
-                <li data-filter=".filter-branding">Seo</li>
-                <li data-filter=".filter-books">Music</li>
-                </ul><!-- End Portfolio Filters -->
-            </div>
-    
-            <div class="row gy-4 portfolio-container">
-    
-                <div class="col-xl-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                    <a href="static/images/b1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b1.jpg" class="img-fluid" alt=""></a>
-                    <div class="portfolio-info">
-                    <h4><a href="portfolio_details" title="More Details">App 1</a></h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    </div>
-                </div>
-                </div><!-- End Portfolio Item -->
-    
-                <div class="col-xl-4 col-md-6 portfolio-item filter-product">
-                <div class="portfolio-wrap">
-                    <a href="static/images/b2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b2.jpg" class="img-fluid" alt=""></a>
-                    <div class="portfolio-info">
-                    <h4><a href="portfolio_details" title="More Details">Product 1</a></h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    </div>
-                </div>
-                </div><!-- End Portfolio Item -->
-    
-                <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
-                <div class="portfolio-wrap">
-                    <a href="static/images/b3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b3.jpg" class="img-fluid" alt=""></a>
-                    <div class="portfolio-info">
-                    <h4><a href="portfolio_details" title="More Details">Music 1</a></h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    </div>
-                </div>
-                </div><!-- End Portfolio Item -->
-    
-                <div class="col-xl-4 col-md-6 portfolio-item filter-books">
-                <div class="portfolio-wrap">
-                    <a href="static/images/b4.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b4.jpg" class="img-fluid" alt=""></a>
-                    <div class="portfolio-info">
-                    <h4><a href="portfolio_details" title="More Details">Product 1</a></h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    </div>
-                </div>
-                </div><!-- End Portfolio Item -->
-    
-                <div class="col-xl-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                    <a href="static/images/b5.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b5.jpg" class="img-fluid" alt=""></a>
-                    <div class="portfolio-info">
-                    <h4><a href="portfolio_details" title="More Details">App 2</a></h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    </div>
-                </div>
-                </div><!-- End Portfolio Item -->
-    
-                <div class="col-xl-4 col-md-6 portfolio-item filter-product">
-                <div class="portfolio-wrap">
-                    <a href="static/images/b6.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b6.jpg" class="img-fluid" alt=""></a>
-                    <div class="portfolio-info">
-                    <h4><a href="portfolio_details" title="More Details">Product 2</a></h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    </div>
-                </div>
-                </div><!-- End Portfolio Item -->
-    
-                <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
-                <div class="portfolio-wrap">
-                    <a href="static/images/b7.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b7.jpg" class="img-fluid" alt=""></a>
-                    <div class="portfolio-info">
-                    <h4><a href="portfolio_details" title="More Details">Optimisation 2</a></h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    </div>
-                </div>
-                </div><!-- End Portfolio Item -->
-    
-                <div class="col-xl-4 col-md-6 portfolio-item filter-books">
-                <div class="portfolio-wrap">
-                    <a href="static/images/b8.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b8.jpg" class="img-fluid" alt=""></a>
-                    <div class="portfolio-info">
-                    <h4><a href="portfolio_details" title="More Details">Seo 2</a></h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    </div>
-                </div>
-                </div><!-- End Portfolio Item -->
-    
-                <div class="col-xl-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                    <a href="static/images/b9.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b9.jpg" class="img-fluid" alt=""></a>
-                    <div class="portfolio-info">
-                    <h4><a href="portfolio_details" title="More Details">App 3</a></h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    </div>
-                </div>
-                </div><!-- End Portfolio Item -->
-    
-                <div class="col-xl-4 col-md-6 portfolio-item filter-product">
-                <div class="portfolio-wrap">
-                    <a href="static/images/b1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b1.jpg" class="img-fluid" alt=""></a>
-                    <div class="portfolio-info">
-                    <h4><a href="portfolio_details" title="More Details">Product 3</a></h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    </div>
-                </div>
-                </div><!-- End Portfolio Item -->
-    
-                <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
-                <div class="portfolio-wrap">
-                    <a href="static/images/b2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b2.jpg" class="img-fluid" alt=""></a>
-                    <div class="portfolio-info">
-                    <h4><a href="portfolio_details" title="More Details">Branding 3</a></h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    </div>
-                </div>
-                </div><!-- End Portfolio Item -->
-    
-                <div class="col-xl-4 col-md-6 portfolio-item filter-books">
-                <div class="portfolio-wrap">
-                    <a href="static/images/b3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b3.jpg" class="img-fluid" alt=""></a>
-                    <div class="portfolio-info">
-                    <h4><a href="portfolio_details" title="More Details">Seo 3</a></h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    </div>
-                </div>
-                </div><!-- End Portfolio Item -->
-    
-            </div><!-- End Portfolio Container -->
-    
-            </div>
-    
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio sections-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+        <h2>Our Portfolio</h2>
+        <p class="bellefair-font text-dark fs-5">Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti</p>
         </div>
-    </section><!-- End Portfolio Section -->
+
+        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+
+        <div>
+            <ul class="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">Apps</li>
+            <li data-filter=".filter-product">Products</li>
+            <li data-filter=".filter-branding">Seo</li>
+            <li data-filter=".filter-books">Music</li>
+            </ul><!-- End Portfolio Filters -->
+        </div>
+
+        <div class="row gy-4 portfolio-container">
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+                <a href="static/images/b1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                <h4><a href="portfolio_details" title="More Details">App 1</a></h4>
+                <p class="bellefair-font">Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+            </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-product">
+            <div class="portfolio-wrap">
+                <a href="static/images/b2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b2.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                <h4><a href="portfolio_details" title="More Details">Product 1</a></h4>
+                <p class="bellefair-font">Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+            </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
+            <div class="portfolio-wrap">
+                <a href="static/images/b3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b3.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                <h4><a href="portfolio_details" title="More Details">Music 1</a></h4>
+                <p class="bellefair-font">Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+            </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-books">
+            <div class="portfolio-wrap">
+                <a href="static/images/b4.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b4.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                <h4><a href="portfolio_details" title="More Details">Product 1</a></h4>
+                <p class="bellefair-font">Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+            </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+                <a href="static/images/b5.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b5.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                <h4><a href="portfolio_details" title="More Details">App 2</a></h4>
+                <p class="bellefair-font">Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+            </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-product">
+            <div class="portfolio-wrap">
+                <a href="static/images/b6.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b6.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                <h4><a href="portfolio_details" title="More Details">Product 2</a></h4>
+                <p class="bellefair-font">Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+            </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
+            <div class="portfolio-wrap">
+                <a href="static/images/b7.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b7.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                <h4><a href="portfolio_details" title="More Details">Optimisation 2</a></h4>
+                <p class="bellefair-font">Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+            </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-books">
+            <div class="portfolio-wrap">
+                <a href="static/images/b8.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b8.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                <h4><a href="portfolio_details" title="More Details">Seo 2</a></h4>
+                <p class="bellefair-font">Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+            </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+                <a href="static/images/b9.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b9.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                <h4><a href="portfolio_details" title="More Details">App 3</a></h4>
+                <p class="bellefair-font">Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+            </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-product">
+            <div class="portfolio-wrap">
+                <a href="static/images/b1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                <h4><a href="portfolio_details" title="More Details">Product 3</a></h4>
+                <p class="bellefair-font">Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+            </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
+            <div class="portfolio-wrap">
+                <a href="static/images/b2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b2.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                <h4><a href="portfolio_details" title="More Details">Branding 3</a></h4>
+                <p class="bellefair-font">Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+            </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-books">
+            <div class="portfolio-wrap">
+                <a href="static/images/b3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="static/images/b3.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                <h4><a href="portfolio_details" title="More Details">Seo 3</a></h4>
+                <p class="bellefair-font">Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+            </div>
+            </div><!-- End Portfolio Item -->
+
+        </div><!-- End Portfolio Container -->
+
+        </div>
+
+    </div>
+</section><!-- End Portfolio Section -->
 
 
 
@@ -231,6 +254,6 @@
     <script src="static/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-    <script src="static/js/login.js"></script>
+    <script src="{% static 'js/login.js' %}"></script>
 </body>
 </html>
