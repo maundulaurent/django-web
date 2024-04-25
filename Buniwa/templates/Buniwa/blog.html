@@ -119,163 +119,34 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row gy-4 posts-list">
-
+          <!-- Loop through each card dynamically -->
+          {% for card in cards %}
           <div class="col-xl-4 col-md-6">
             <article>
 
               <div class="post-img">
-                <img src="static/images/bgs1.jpg" alt="" class="img-fluid">
+                <img src="{{ card.card_image.url }}" alt="" class="img-fluid">
               </div>
-
-              <p class="post-category">Web Apps</p>
-
+              <p class="post-category">{{ card.category }}</p>
               <h2 class="title">
-                <a href="blog_details" class="text-decoration-none">Dolorum optio tempore voluptas dignissimos</a>
+                <a href="blog_details" class="text-decoration-none">{{ card.title }}</a>
               </h2>
 
               <div class="d-flex align-items-center">
-                <img src="static/images/bgs2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <img src="{{ card.author_image.url }}" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
-                  <p class="post-author-list">Maria Doe</p>
+                  <p class="post-author-list">{{ card.author }}</p>
                   <p class="post-date">
-                    <time datetime="2022-01-01">Jan 1, 2022</time>
+                    <!-- <time datetime="2022-01-01">Jun 5, 2022</time> -->
+                    <time datetime="{{ card.published_date }}">{{ card.published_date }}</time>
                   </p>
                 </div>
               </div>
 
             </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="static/images/bgs3.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">AI</p>
-
-              <h2 class="title">
-                <a href="blog_details" class="text-decoration-none">Nisi magni odit consequatur autem nulla dolorem</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="static/images/bgs4.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author-list">Allisa Mayer</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 5, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="static/images/bgs5.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Seo Opt.</p>
-
-              <h2 class="title">
-                <a href="blog_details" class="text-decoration-none">Discussing about the company's seo progress.</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="static/images/bgs6.jfif" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author-list">Mark Dower</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="static/images/bgs7.avif" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Marketing</p>
-
-              <h2 class="title">
-                <a href="blog_details" class="text-decoration-none">Keeping it a burn. The team keeping its best doing the marketing thing</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="static/images/bgs1.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author-list">Lisa Neymar</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 30, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="static/images/bgs8.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Discussions</p>
-
-              <h2 class="title">
-                <a href="blog_details" class="text-decoration-none bellefair-font">Lorem, ipsum dolor sit amet consectetur adipisicing.</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="static/images/bgs9.avif" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author-list">Denis Peterson</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jan 30, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="static/images/bgs10.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">BenchMarking</p>
-
-              <h2 class="title">
-                <a href="blog_details" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur.</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="static/images/bgs2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author-list">Mika Lendon</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Feb 14, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
+          </div>
+          {% endfor %}
+          <!-- End post list item -->
         </div><!-- End blog posts list -->
 
         <div class="blog-pagination">

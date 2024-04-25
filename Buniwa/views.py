@@ -2,6 +2,10 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
+from .models import Card
+from .models import PortfolioPost
+from .models import theTeam
+
 
 
 # Create your views here.
@@ -13,7 +17,8 @@ def about(request):
     return render(request, 'Buniwa/about.html')
 
 def team(request):
-    return render(request, 'Buniwa/team.html')
+    cards = theTeam.objects.all()
+    return render(request, 'Buniwa/team.html', {'cards': cards})
 
 def services(request):
     return render(request, 'Buniwa/services.html')
@@ -32,7 +37,9 @@ def faqs(request):
     return render(request, "Buniwa/faqs.html")
 
 def blog(request):
-    return render(request, "Buniwa/blog.html")
+    cards = Card.objects.all()
+    return render(request, "Buniwa/blog.html", {'cards': cards})
+
 
 def blog_details(request):
     return render(request, "Buniwa/blog_details.html")
@@ -58,4 +65,5 @@ def portfolio_details(request):
     return render(request, 'Buniwa/portfolio_details.html')
 
 def portfolio(request):
-    return render(request, 'Buniwa/portfolio.html')
+    cards = PortfolioPost.objects.all()
+    return render(request, 'Buniwa/portfolio.html', {'cards': cards})

@@ -49,7 +49,7 @@ h4, h5, h6, .h4, .h5, .h6 {
 
 
 
-.vertical-line {
+.vertycal-line {
     border-left: 1px solid black; /* Change the color or style as needed */
     height: 30px; /* Adjust the height of the vertical line */
     margin-left: 20px; /* Adjust the distance from the preceding content */

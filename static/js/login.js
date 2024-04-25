@@ -3,7 +3,21 @@ document.addEventListener('DOMContentLoaded', () => {
     "use strict";
   
 
-    
+    // Initialize Isotope
+  var $grid = $('.portfolio-container').isotope({
+    itemSelector: '.portfolio-item',
+    layoutMode: 'fitRows'
+  });
+
+  // Filter items on button click
+  $('.portfolio-flters li').on('click', function () {
+    $('.portfolio-flters li').removeClass('filter-active');
+    $(this).addClass('filter-active');
+
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
+
     /**
      * Sticky Header on Scroll
      */
