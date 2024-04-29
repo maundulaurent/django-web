@@ -1,48 +1,18 @@
+{% extends 'Buniwa/base.html' %}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
+{% block title %}Buniwa | Projects {% endblock %}
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+{% block content %}
 
-  <title>Buniwa | Projects</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="static/vendor/aos/aos.css" rel="stylesheet">
-    <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/owlcarousel/owl.carousel.min.css' %}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="static/css/login.css" rel="stylesheet">
     <!-- Bootstrap Stylesheet -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
-    <link rel="icon" href="{% static 'images/buniwalogo.jpg' %}" type="image/x-icon">
-
-
 </head>
-<body>
-
 
 <!-- Navbar start -->
 <div class="nav-bar  header-transparent container">
@@ -183,10 +153,6 @@
     <!-- End Hero Section -->
 
 
-
-    <!-- Ka-login system -->
-
-  
     <!-- End Login System -->
   
   
@@ -251,26 +217,28 @@
                 </div>
     
               </div>
+
+
     
               <div class="col-lg-8">
                 <form action="." method="post">
                   {% csrf_token %}
-                  <div class="row">
+                  <div class="row m-3">
                     <div class="col-md-6 form-group">
-                      <input type="text" name="m_name" class="form-control" id="name" placeholder="Your Name" required>
+                      <input type="text" name="m_name" class="form-control " id="name" placeholder="Your Name" required>
                     </div>
                     <div class="col-md-6 form-group mt-3 mt-md-0">
                       <input type="email" class="form-control" name="m_email" id="email" placeholder="Your Email" required>
                     </div>
                   </div>
-                  <div class="form-group mt-3">
+                  <div class="form-group m-3">
                     <input type="text" class="form-control" name="m_content" id="subject" placeholder="I want to do business with you..." required>
                   </div>
-                  <div class="form-group mt-3">
+                  <div class="form-group m-3">
                     <textarea class="form-control" name="m_content" rows="7" placeholder="Description of Project to be handled" required></textarea>
                   </div>
-                  <div class="text-center"><button>Send Message</button></div>
-                  <p class="text center">Have an account?<a href="dash"> Login</a></p>
+                  <div class="text-center"><button class="btn btn-outline-info">Send Message</button></div>
+                  <p class="text center p-3">Have an account?<a href="dash"> Login</a></p>
                 </form>
               </div><!-- End Contact Form -->
     
@@ -278,8 +246,6 @@
     
           </div>
         </section><!-- End Contact Section -->
-        <p class="mt-5 mb-3 text-muted text-center">&copy; 2019–2024</p>
-
 
 
       <!-- Vendor JS Files -->
@@ -293,6 +259,6 @@
 
   <!-- Template Main JS File -->
   <script src="static/js/login.js"></script>
- </body>
- </html>   
+   
     
+ {% endblock %}

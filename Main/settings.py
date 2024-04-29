@@ -4,6 +4,8 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 SECRET_KEY = 'django-insecure-(xgqe1mvg_kqfwg)h4jgx12(98z(!a21y3z1a^#(jtsoe@(-6b'
 
