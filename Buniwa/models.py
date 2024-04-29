@@ -1,9 +1,16 @@
 from django.db import models
 
+<<<<<<< HEAD
 class theBlog(models.Model):
     title = models.CharField(max_length=20)
     category = models.CharField(max_length=100)
     # content = models.TextField()
+=======
+class Card(models.Model):
+    title = models.CharField(max_length=50)
+    category = models.CharField(max_length=100)
+    content = models.TextField()
+>>>>>>> 2a242e0ccc7c1ec90306a6f34bff775db59f3b49
     author = models.CharField(max_length=100)
     published_date = models.DateField()
     card_image = models.ImageField(upload_to='card_images/')
@@ -11,9 +18,12 @@ class theBlog(models.Model):
 
     def __str__(self):
         return self.title
+<<<<<<< HEAD
     
     class Meta:
         verbose_name_plural = 'Blogs Section'
+=======
+>>>>>>> 2a242e0ccc7c1ec90306a6f34bff775db59f3b49
 
 
         
@@ -25,9 +35,12 @@ class PortfolioPost(models.Model):
     def __str__(self):
         return self.title
     
+<<<<<<< HEAD
     class Meta:
         verbose_name_plural = 'Portfolio Section'
     
+=======
+>>>>>>> 2a242e0ccc7c1ec90306a6f34bff775db59f3b49
 
 class theTeam(models.Model):
     team_name = models.CharField(max_length=20)
@@ -41,7 +54,10 @@ class theTeam(models.Model):
     def __str__(self):
         return self.team_name
     
+<<<<<<< HEAD
     class Meta:
         verbose_name_plural = 'Teams Section'
     
+=======
+>>>>>>> 2a242e0ccc7c1ec90306a6f34bff775db59f3b49
 

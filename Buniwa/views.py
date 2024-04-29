@@ -1,7 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate,login,logout
+<<<<<<< HEAD
 from .models import theBlog
+=======
+from django.contrib.auth.models import User
+from .models import Card
+>>>>>>> 2a242e0ccc7c1ec90306a6f34bff775db59f3b49
 from .models import PortfolioPost
 from .models import theTeam
 
@@ -36,10 +41,16 @@ def faqs(request):
     return render(request, "Buniwa/faqs.html")
 
 def blog(request):
+<<<<<<< HEAD
     cards = theBlog.objects.all()
     return render(request, "Buniwa/blog.html", {'cards': cards})
 
 
+=======
+    cards = Card.objects.all()
+    return render(request, "Buniwa/blog.html", {'cards': cards})
+
+>>>>>>> 2a242e0ccc7c1ec90306a6f34bff775db59f3b49
 
 def blog_details(request):
     return render(request, "Buniwa/blog_details.html")

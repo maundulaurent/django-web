@@ -29,14 +29,27 @@
 
         <div>
             <ul class="portfolio-flters">
+<<<<<<< HEAD
             <li data-filter="*" class="filter-active ">Our Popular Products</li>
             </ul>
+=======
+            <li data-filter="*" class="filter-active text-dark">Our Popular Products</li>
+            <!-- <li data-filter=".filter-app">Apps</li>
+            <li data-filter=".filter-product">Products</li>
+            <li data-filter=".filter-branding">Seo</li>
+            <li data-filter=".filter-books">Music</li> -->
+            </ul><!-- End Portfolio Filters -->
+>>>>>>> 2a242e0ccc7c1ec90306a6f34bff775db59f3b49
         </div>
         <div class="row gy-4 portfolio-container">
             {% for card in cards %}
             <div class="col-xl-4 col-md-6 portfolio-item filter-{{ card.category }}">
             <div class="portfolio-wrap">
+<<<<<<< HEAD
                 <a href="{{ card.post_image.url }}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ card.post_image.url }}" class="img-fluid" alt="{{ card.title }}" style="width: 355px; height: 330px;"></a>
+=======
+                <a href="{{ card.post_image.url }}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ card.post_image.url }}" class="img-fluid" alt="{{ card.title }}"></a>
+>>>>>>> 2a242e0ccc7c1ec90306a6f34bff775db59f3b49
                 <div class="portfolio-info">
                 <h4><a href="portfolio_details" title="More Details">{{ card.title }}</a></h4>
                 <p class="bellefair-font">{{ card.description }}</p>
@@ -62,9 +75,20 @@
 <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
 <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
 
+<<<<<<< HEAD
 <!-- Template Main JS File -->
 <script src="{% static 'js/login.js' %}"></script>
 
 
 
 {% endblock %}
+=======
+
+    <!-- Include Isotope library -->
+    <script src="https://cdn.jsdelivr.net/npm/isotope-layout@4.0.0/dist/isotope.pkgd.min.js"></script>
+
+  <!-- Template Main JS File -->
+    <script src="{% static 'js/login.js' %}"></script>
+</body>
+</html>
+>>>>>>> 2a242e0ccc7c1ec90306a6f34bff775db59f3b49
