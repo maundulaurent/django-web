@@ -1,4 +1,10 @@
 
+@font-face {
+    font-family: 'MyFont';
+    src: url('/static/fonts/Cabo-Rounded-Regular.otf') format('truetype');
+  }
+  
+
 .back-to-top {
     position: fixed;
     right: 30px;
@@ -8,16 +14,16 @@
 
 h1, h2, h3, .h1, .h2, .h3 {
     font-weight: 400 !important;
-    font-family: 'Genos', sans-serif !important;
+    font-family: 'MyFont', sans-serif !important;
 }
 
 h4, h5, h6, .h4, .h5, .h6 {
     font-weight: 600 !important;
-    font-family: 'MuseoModerno', sans-serif !important;
+    font-family: 'MyFont', sans-serif !important;
 }
 
 .good-font {
-    font-family: 'Bellefair', serif;
+    font-family: 'MyFont', serif;
     font-weight: 400;
 }
 
